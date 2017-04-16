@@ -1,0 +1,33 @@
+Data: 23/03/2017
+
+1. Considerando a biblioteca-padrão da linguagem C, responda:
+	(a) Quais são as funções (e seus protótipos) para abrir e fechar arquivos?
+		ponteiro = fopen(nome_arq, modo)
+		ponteiro = fclose (nome_arq, modo)
+	(b) Quais são as funções (e seus protótipos) para escrever em arquivos?
+		fprintf é utilizado para escrever em arquivos
+	(c) Quais são as funções (e seus protótipos) para ler arquivos?
+		fscanf é utilizado para ler arquivos
+	(d) Quais são as funções (e seus protótipos) para reposicionar um ponteiro para arquivo?
+		FILE *ponteiro
+	(e) Quais bibliotecas devem ser incluídas no código para poder utilizar as funções acima?
+		#include <stdio.h>
+
+2. O que é a norma POSIX?
+	Norma POSIX é uma norma definida pela IEEE para a compatibilidade entre sistemas operacionais funcionando como uma
+padronização para um programa em norma POSIX funcione em qualquer máquina que utilize esta norma.
+
+3. Considerando a norma POSIX, responda:
+	(a) Quais são as funções (e seus protótipos) para abrir e fechar arquivos?
+		int open (caminho do arquivo em char, flags de abertura);
+		close(variável)
+	(b) Quais são as funções (e seus protótipos) para escrever em arquivos?
+		write(variavel, ¨char¨, bytes escritos)
+	(c) Quais são as funções (e seus protótipos) para ler arquivos?
+		read(variavel, endereço da variavel, quantidade de caracteres a partir do ponteiro do repositor)
+	(d) Quais são as funções (e seus protótipos) para reposicionar um ponteiro para arquivo?
+		lseek(variavel, quantidade de pulos, condição de inicio)
+	(e) Quais bibliotecas devem ser incluídas no código para poder utilizar as funções acima?
+		#include <fcntl.h>
+		#include <unistd.h>
+		#include <stdlib.h>
