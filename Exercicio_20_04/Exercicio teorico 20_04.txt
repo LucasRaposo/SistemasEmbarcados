@@ -1,0 +1,30 @@
+Data: 20/04/2017
+
+1. Apresente 5 sistemas operacionais suportados pelo Raspberry Pi, e algumas de suas características.
+	.Raspbian, considerado o SO oficial do Raspberry Pi, Tem como característica uma interace bastante voltada para o usuário final
+	.Ubuntu MATE, é dedicada para usuários que desejam fazer do RPi o mais próximo de um PC.Bem similar ao ubuntu comum com mesmos pacotes de
+	programas e recursos.
+	.OSMC, ideal para quem quer transformar o RPi em um media center. Ele é copletamente dedicado a isto diferente dos SO's acima que são bem
+	generalistas, similar a um AppleTV
+	.RecalBox, dedicado exclusivamente para emulação de jogos
+	.Pidora, é um SO geral bem similar ao Ubuntu MATE porém é baseado no Fedora.
+
+
+
+2. Apresente as formas de instalação de sistemas operacionais para o Raspberry Pi.
+	Instalação via Noobs: Ferramenta que tem um pacote com vários SO's para RPi de facil instalação
+	Instalação Via .iso: Instalar a image direto no  cartão de memória utilizando ferramentas como Eitcher.
+	
+
+3. Apresente 3 formas de desenvolvimento de software para o Raspberry Pi.
+	Pode-se desenvolver software em Java, Python e C.
+
+4. Apresente 3 formas de acesso remoto ao Raspberry Pi.
+	Pode-se fazer o acesso remoto via SSH, é conhecido por ser uma maneira bem simples de acessar apesar de apenas dar comandos pelo terminal
+	Pode-se fazer o acesso remoto via VNC, tem como principal vantagem poder fazer acesso remoto com interface gráfica.
+
+5. Apresente as formas possíveis de compilação de código em C para o Raspberry Pi.
+	Pode-se compilar via GCC ou via IDE como BlueJ, CodeBlocksIDE
+
+6. Apresente as formas possíveis de compilação de código em Python para o Raspberry Pi.
+	Pode-se executar via comando "$ python nome.py" ou usando a IDE do Python tanto 2.7 quanto 3

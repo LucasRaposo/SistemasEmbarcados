@@ -1,0 +1,59 @@
+Data: 04/04/2017
+
+1. Quais são as vantagens e desvantagens em utilizar:
+	(a) fork?
+		Fork pode duplicar um processo em 2 iguais porém com Pid diferentes. A vantage é que cada processo filho realiza sua tarefa
+		indepedente um do outro, evitando compartilhaento de espaço de memória diminuindo risco de corromper. A desvantagem é que 
+		um processo não consegue comunicar com outro processo sem a utilização de um Pipe, deixando o código mais robusto.
+		
+		
+	(b) threads?
+		Threads tem a vantagem de poder utilizar várias em uma única aplicação, todas compartilham o mesmo espaço de memória, logo 
+		a comunicação entre elas é mais fácil de se fazer. A desvantagem é que como compartilham o mesmo espaço de memória, há um risco
+		risco de corrupção de dados.
+
+
+
+2. Quantas threads serão criadas após as linhas de código a seguir? Quantas coexistirão? Por quê?
+	(a)
+		void* funcao_thread_1(void *arg);
+		void* funcao_thread_2(void *arg);
+		
+		int main (int argc, char** argv)
+		{
+			pthread_t t1, t2;
+			pthread_create(&t1, NULL, funcao_thread_1, NULL);
+			pthread_create(&t2, NULL, funcao_thread_2, NULL);
+			pthread_join(t1, NULL);
+			pthread_join(t2, NULL);
+			return 0;
+		}
+
+		
+		Neste caso acima serão abertas 2 threads pois ele cria uma pthread e dentro da função void de cada uma não realiza nenhuma tarefa
+		o pthread_join aguarda a função terminar de ser executada para passar para próxima linha porém as duas threads já estão sendo
+		executadas.
+
+
+	(b)
+		void* funcao_thread_1(void *arg);
+		void* funcao_thread_2(void *arg);
+		
+		int main (int argc, char** argv)
+		{
+			pthread_t t1, t2;
+			pthread_create(&t1, NULL, funcao_thread_1, NULL);
+			pthread_join(t1, NULL);
+			pthread_create(&t2, NULL, funcao_thread_2, NULL);
+			pthread_join(t2, NULL);
+			return 0;
+		}
+
+		Neste caso acima serão abertas duas threads porém uma só é criada após a outra terminar de ter sua função void executada por
+		causa do comando pthread_join. O programa cria a primeira thread e a função main fica travada no pthread_join até que o função
+		void da primeira thread seja finalizada. Logo a seunda thread coexiste.
+
+3. Apresente as características e utilidades das seguintes funções:
+	(a) pthread_setcancelstate()
+	(b) pthread_setcanceltype()
+(DICA: elas são relacionadas à função pthread_cancel().)

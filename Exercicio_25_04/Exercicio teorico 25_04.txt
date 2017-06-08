@@ -1,0 +1,37 @@
+
+Data: 25/04/2017
+
+1. Com relação às conexões GPIO do modelo de Raspberry Pi que você usará no projeto, responda:
+	(a) Quais pinos podem ser utilizados como entradas e saídas digitais comuns?
+		Pino 7  (GPIO 4)
+		Pino 11 (GPIO 17)
+		Pino 12 (GPIO 18)
+		Pino 13 (GPIO 27)
+		Pino 15 (GPIO 22)
+		Pino 16 (GPIO 23)
+		Pino 18 (GPIO 24)
+		Pino 22 (GPIO 25)
+		Pino 29 (GPIO 5)
+		Pino 31 (GPIO 6)
+		Pino 32 (GPIO 12)
+		Pino 33 (GPIO 13)
+		Pino 35 (GPIO 19)
+		Pino 36 (GPIO 16)
+		Pino 37 (GPIO 26)
+		Pino 38 (GPIO 20)
+		Pino 40 (GPIO 21)
+
+	(b) Quais pinos possuem resistores de pull-up e pull-down?
+	(c) Quais formas de comunicação serial são suportados pelos pinos GPIO?
+		Comunicação Via I2C (Portas 3 e 5)
+		Comunicação Via UART (Pinos 8 e 10)
+		Comunicação Via SPI (Pinos 19, 21, 23, 24, 26)
+
+2. Apresente outras 3 bibliotecas de acesso I/O em C para o Raspberry Pi.
+	Biblioteca WiringPi
+	Utilizando gpio_dev_mem.h
+	Utilizando gpio_sysfs.h
+	
+
+
+

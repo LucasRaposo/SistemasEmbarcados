@@ -1,0 +1,52 @@
+
+Data: 13/04/2017
+
+1. Especifique algumas portas importantes pré-definidas para o protocolo TCP/IP.
+	Portas 0 a 995
+	Portas 1058 a 47808
+	Portas 49152 a 65535
+
+2. Com relação a endereços IP, responda:
+	(a) Qual é a diferença entre endereços IP externos e locais?
+		IP externos são a forma de identificar o computador na internet, na rede mundial. IP local identifica o computador detro da rede
+		local como intranet.
+
+	(b) Como endereços IP externos são definidos? Quem os define?	
+	(c) Como endereços IP locais são definidos? Quem os define?
+
+	(d) O que é o DNS? Para que ele serve?
+		DNS é como um banco de dados onde relaciona o nome do site na maneira que escreve no browser com o IP da máquina que se encontra
+		o site
+
+3. Com relação à pilha de protocolos TCP/IP, responda:
+	(a) O que são suas camadas? Para que servem?
+		As camadas são as etapas que uma informação faz para conseguir ser trasnsmitida via protocolo. Elas servem para subdividir o 
+		processo de envio da informação afim de diminuir a abstração.
+
+	(b) Quais são as camadas existentes? Para que servem?
+		O protocolo TCP/IP usa como referencia o modelo OSI. O modelo OSI usa 7 camadas, já o protocolo TCP/IP aglutina algumas camadas
+		dessas e diminui a quantidade para 4. As camadas mais externas OSI são "Aplicação, Apresentação e Sessão" pelo protocolo TCP elas
+		são aglutinadas em Aplicação e tem como função ser a camada mais externa do usuário, informação da maquina de como proceder.
+		A camada transporte vale tanto para o modelo OSI como para o protocolo TCP. Essa camada faz a comunicação local como por exemplo
+		entre maquina modem roteador.
+		A terceira camada do modelo OSI é a Internet que vale também para o protocolo TCP. Essa camada tem como função a comunicação
+		entre as reder locais da camada superior.
+		A segunda e primeira camada do modelo OSI são respectivamente "Link de dados" e "Física" e são aglutinadas como "Rede" pelo 
+		protocolo TCP. Essa camada é a parte física da comunicação, a física são os equipamentos físicos que fazem a comunicação,
+		Já a parte de Link de dados são a parte lógica de dados.
+
+	(c) Quais camadas são utilizadas pela biblioteca de sockets?
+		Sockets usam as camadas de aplicação do TCP, logo Aplicação, apresentação e Sessão do modelo OSI. 
+
+	(d) As portas usadas por servidores na função bind() se referem a qual camada?
+		A função bind() se referem a camada de transporte. Pois a função faz a comunicação entre o ip da máquina e a porta do protocolo
+		TCP.		
+
+	(e) Os endereços usados por clientes na função connect() se referem a qual camada?
+		A função connect() se referea camada internet, pois ela é usada para comunicar o ip da sua máquina com  um servidor da nuvem.
+
+4. Qual é a diferença entre os métodos GET e POST no protocolo HTTP?
+	A função GET  é utilizado para passar pequenas informações (Até 1024 caracteres) para uma outra página. O método POST tem a mesma função
+	da GET porém ela é mais segura por não expor os dados enviados ao navegador. Outra vatage é que o método POST não tem limite de caracteres
+	
+

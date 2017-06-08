@@ -1,0 +1,21 @@
+Data: 06/04/2017
+
+1. Apresente as características e utilidades das seguintes funções:
+	(a) popen()
+		A função popen() cria um pipe unidirecional e separa os processos entre pai e filho. Esse pipe apenas comunica pai com filho e 
+		não vice-versa. Logo o popen() cria dois processos e um pipe onde apenas um processo pode ler o escrever no outro.
+	
+	(b) pclose()
+		A função pclose() fecha o pipe criado anteriormente pela função popen()
+
+	(c) fileno()
+		A função fileno() retorna o número do descritor do arquivo que serve para apontar o pipe para poder realizar
+		funções read e write
+
+2. Quais são as vantagens e desvantagens em utilizar:
+	(a) popen()?
+		popen abre dois processos diferentes e realiza um pipe entre eles para se comunicare		
+		
+	(b) exec()?
+		A função exec() executa outro programa no processo. A desvantagem de realizar este comando é  que não é possível trocar 
+		iformações entre os programas.
